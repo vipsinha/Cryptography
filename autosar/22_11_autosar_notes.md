@@ -157,3 +157,11 @@ The X.509 Provider shall support ASN.1 parsing. Thus it provides an ASN.1 parser
 2. Certificate Signature Algorithm
 3. Certificate Signature
 
+#### Certificate signing
+
+#### revocation of certificates   
+- CRL is a list of digital certificates that have been revoked before their expiration date was reached. This list contains all the serial numbers of the revoked certificates and the revoked data
+-  CRL can contain two different states:
+    - Revoked: certificates that are irreversibly revoked.  
+    - Hold: certificates that are marked as temporally invalid.
+
