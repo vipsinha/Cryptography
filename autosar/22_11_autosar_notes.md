@@ -65,35 +65,103 @@ random data.
 
 ### Key Agreement
 
-### MAC
-
-### Symmetric block cipher
-
-### Stream cipher
-
-### Authenticated cipher
-
-### Symmetric key wrap
-- wraps (i.e., encrypts) a private or secret key.
-- Key Wrapping encapsulates Key Material, which is used for example to store a key in an unsecure environment or transport a key by an unsecure channel. Wrapping a key is a kind of encryption of the key and contributes to confidentiality.
-- Wrapping a key requires a KEK. With the call of the CryptoAPI interface the KEK is set (deployed) to the key wrapper algorithm context. Additionally, a ”direction” indicator is used to define the transformation direction, such as wrapping, unwrapping, signature calculation, or signature verification.
-
 ### Verifier public / Message Recovery public / Encryptor public
 
 ### Signer private / Signature Encode private / DecryptorPrivateCtx 
 Digital signature contributes to goal authenticity when information is transferred. Guaranteeing the authenticity of the information asymmetric cryptography is used, where
 the information is signed by a private key and verified later by using the matching public key. When the verification is successful, the receiver of the information can be sure that the owner of the private key is the sender of the information.
 
+### MAC
+- If signing include HMAC, CMAC (symmetric key), then it is called Mac
+
+### Symmetric encryption
+Symmetric encryption uses a shared secret (e.g., share key) to encrypt and / or decrypt
+an information. Without knowing the key, the information cannot be understood by
+anyone
+
+#### Block cipher
+Data with a fixed length is transformed (en/decrypted). The
+system can only process complete blocks of data held in its internal memory.
+
+#### Stream cipher
+Information is encrypted as it streams instead of being retained in the system’s memory.
+
+### Asymmetric encryption
+Asymmetric encryption, asymmetric cryptography, or public key cryptography is a system, which is based on a pair of keys, public key and private key. As the name suggest, a public key can be distributed public to everyone without losing secrecy. Instead, a private key must be kept secret. Compared to symmetric cryptography, every user, who possesses the public key, can encrypt information, but only the user with the private key can decrypt the information.
+
+### Authenticated cipher
+Authenticated Encryption (AE) or Authenticated Encryption with Associated Data (
+AEAD) provide confidentiality and data authenticity simultaneously. AEAD adds the ability to check the integrity and authenticity of some Associated Data (AD), also called ”additional authenticated data”. Additionally, this mechanism adds an Message Authentication Code (MAC), to conform that encrypted
+data is authentic.
+
+### Key wrap
+- wraps (i.e., encrypts) a private or secret key.
+- Key Wrapping encapsulates Key Material, which is used for example to store a key in an unsecure environment or transport a key by an unsecure channel. Wrapping a key is a kind of encryption of the key and contributes to confidentiality.
+- Wrapping a key requires a KEK. With the call of the CryptoAPI interface the KEK is set (deployed) to the key wrapper algorithm context. Additionally, a ”direction” indicator is used to define the transformation direction, such as wrapping, unwrapping, signature calculation, or signature verification.
+
 ### Key Encapsulation public
-A key encapsulation mechanism (KEM) works just like a public-key encryption
+- A key encapsulation mechanism (KEM) works just like a public-key encryption
 scheme, except that the encryption algorithm takes no input other than another key.
 Therefore, the KEM uses randomly generated Key Material, the key encryption key
 (KEK), to encapsulate an input, in this situation a key. The input is encapsulated with
-an encryption with a target public key, 
+an encryption with a target public key.
+- data encapsulation mechanism and provides a ”crypto envelope” or ”digital envelope” that protects the secrecy and integrity of data using symmetric-key cryptographic techniques concept
 
 ### Key Decapsulation private
 
-### Create signature
-
 ### Generate private key, generate seed and generate symmetric key
+
+#### Symmtric key
+-  A symmetric system consists of a key, which is shared
+between the different parties
+
+#### Asymmetric key
+- Asymmetric systems consist of public and private key,
+which are generated. The public key is used for encryption, key encapsulation, or
+signature verification. The private key is used for decryption, key dencapsulation,
+key exchange, or digital signature calculation.
+
+### Export Secured object / Import Secured Object / Export Publicly
+
+### X.509 Certificate handling
+#### Defination
+X.509 Certificate Management Provider (X.509 Provider) is responsible for X.-
+509 certificates parsing, verification, authentic storage and local searching by different attributes. In addition, X.509 Provider is responsible for storage, management, and processing of Certificate Revocation Lists (CRLs) and Delta CRLs. The X.509 Provider supports the preparation of requests, responses, and parsing according to the Online Certificate Status Protocol (OCSP) 
+#### Main features
+A PKI contains a root certificate and one or many certificates. Main feature are:
+    - Storages of certificates, certification signing requests (CSRs), and certificate revocation lists (CRLs).
+    - Complete parsing of X.509 certificates and certificate signing requests (CSR).
+    - Encoding of all public components of certificate signing requests (e.g. Distinguished Names and X.509 Extensions).
+    - Verification of certificates and certification chains (according to current set of trusted certificates).
+    - Trust management of the stored certificates.
+    - Search of certificates in local storage based on different parameters.
+    - Automatic building of the trust chains according to saved certificates, CRLs, and
+    trust configuration.
+#### Certificate fields
+The X.509 Provider shall support ASN.1 parsing. Thus it provides an ASN.1 parser to read the specific syntax of X.509 certificates. Typical X.509 certificates must follow the definition given in [32] and [33, RFC 5280]:
+1. Certificate
+    - Version Number
+    - ara::crypto::x509::Certificate::SerialNumber
+    - Signature Algorithm ID
+    - ara::crypto::x509::Certificate::IssuerDn
+    - Validity period
+        - ara::crypto::x509::Certificate::StartTime
+        - ara::crypto::x509::Certificate::EndTime
+    - ara::crypto::x509::BasicCertInfo::SubjectDn
+    -  Subject Public Key Info
+        - Public Key Algorithm
+        - Subject Public Key
+    - Issuer Unique Identifier (optional)
+    - Subject Unique Identifier (optional)
+    - Extensions (optional)
+2. Certificate Signature Algorithm
+3. Certificate Signature
+
+#### Certificate signing
+
+#### revocation of certificates   
+- CRL is a list of digital certificates that have been revoked before their expiration date was reached. This list contains all the serial numbers of the revoked certificates and the revoked data
+-  CRL can contain two different states:
+    - Revoked: certificates that are irreversibly revoked.  
+    - Hold: certificates that are marked as temporally invalid.
 
