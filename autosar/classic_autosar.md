@@ -22,6 +22,9 @@
 
 ## Secure boot
 
+### Secure key load
+<img src="pictures/secure_key_load.jpg"/>
+
 ### Secure boot positive
 <img src="pictures/secure_boot_positive.jpg"/>
 
@@ -30,3 +33,14 @@
 
 ### Secure flash
 <img src="pictures/secure_flash.jpg"/>
+
+### Secure digital signature generation
+<img src="pictures/digital_signature_generation.jpg"/>
+
+### Secure digital signature verification
+<img src="pictures/digital_signature_verification.jpg"/>
+
+## Key Exchange
+
+### Diffie-Hillmen key exchange
+<img src="pictures/DH_key_exchange.jpg"/>
