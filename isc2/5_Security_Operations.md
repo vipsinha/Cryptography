@@ -10,7 +10,7 @@
 It covers everything from the time data
 is first created until the time it is eventually destroyed.
 
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 
 # DATA CLASSIFICATION
 ## Classification Schemes
