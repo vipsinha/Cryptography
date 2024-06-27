@@ -122,7 +122,7 @@ The process of identifying and triaging the risks facing an organization based o
 - Risk Assessment Techniques : 
     - Qualitative techniques : subjective judgments to assess risks, typically categorizing them as low, medium, or high on both the likelihood and impact scales.
     - Quantitative techniques : objective numeric ratings to assess the likelihood and impact of a risk
-    ![alt text](image.png)
+    ![alt text](images/image.png)
 
 ## RISK TREATMENT STRATEGIES
 Process of systematically analyzing potential responses to each risk and implementing strategies to control those risks appropriately.
@@ -148,7 +148,7 @@ Process of systematically analyzing potential responses to each risk and impleme
 
 ### Note
 The goal of risk management is to make sure that the combination of the residual risk and the control risk is below the organization’s risk tolerance.
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 # Security Controls
 The procedures and mechanisms that an organization puts in place to address security risks in some manner. This might include trying to reduce the likelihood of a risk materializing, minimize the impact of the risk if it does occur, or detect security issues that do occur

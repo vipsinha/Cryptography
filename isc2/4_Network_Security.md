@@ -20,7 +20,7 @@
     - is the housekeeping protocol of the Internet.
 
 ## OSI Model
-![alt text](image-2.png)    
+![alt text](images/image-2.png)    
 
 ## IP ADDRESSING
 - servers are configured with static IP addresses, and end-user devices are configured with dynamically changing IP addresses.
@@ -44,8 +44,8 @@
     - For example, Micro- soft reserved port 1433 for SQL Server database connections, while Oracle registered port 1521 for its own database’s use.
 - Ports above 49,151 are set aside as dynamic ports
 
-![alt text](image-3.png)
-![alt text](image-4.png)
+![alt text](images/image-3.png)
+![alt text](images/image-4.png)
 
 ## SECURING WI-FI NETWORKS
 - Disable SSID Broadcasting
@@ -60,7 +60,7 @@
 - Wi-Fi Protected Access (WPA) : encryption key for each packet
 - Wi-Fi Protected Access 2 (WPA2) : uses an encryption protocol (AES)
 - Wi-Fi Protected Access 3 (WPA3) : Uses Simultaneous Authentication of Equals (SAE)
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 # Network Threats and Attacks
 
@@ -121,7 +121,7 @@ Understanding and mitigating network threats is critical in safeguarding data an
 - One interface connects to the Internet or another untrusted network.
 - A second interface connects to the organization’s intranet.
 - The third interface connects to the screened subnet. Also known as the DMZ, the screened subnet is a network where you can place systems that must accept connections from the outside world, such as a mail or web server. 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 ## VULNERABILITY SCANNING
 vulnerability scanning to detect new vulnerabilities as they arise and then implement a remediation workflow that addresses the highest-priority vulnerabilities. 
